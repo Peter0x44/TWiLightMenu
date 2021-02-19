@@ -2135,7 +2135,7 @@ int main(int argc, char **argv) {
 				} else if (extention(filename, ".nes") || extention(filename, ".fds")) {
 					launchType[secondaryDevice] = 4;
 
-					ndsToBoot = (secondaryDevice ? "sd:/_nds/TWiLightMenu/emulators/nesds.nds" : "sd:/_nds/TWiLightMenu/emulators/nestwl.nds");
+					ndsToBoot = "sd:/_nds/TWiLightMenu/emulators/nesds.nds";
 					if(!isDSiMode() || access(ndsToBoot, F_OK) != 0) {
 						ndsToBoot = "fat:/_nds/TWiLightMenu/emulators/nesds.nds";
 						boostVram = true;
